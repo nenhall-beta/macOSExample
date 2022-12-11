@@ -23,6 +23,14 @@
 		EE9919B72902EC91009AD283 /* NextWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9919B52902EC91009AD283 /* NextWindowController.swift */; };
 		EE9919B82902EC91009AD283 /* NextWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9919B62902EC91009AD283 /* NextWindowController.xib */; };
 		EE9919BA2902ED18009AD283 /* NextWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9919B92902ED18009AD283 /* NextWindow.swift */; };
+		EED965862946291700B9AAD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED965852946291700B9AAD4 /* AppDelegate.swift */; };
+		EED965882946291700B9AAD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED965872946291700B9AAD4 /* ViewController.swift */; };
+		EED9658A2946291800B9AAD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED965892946291800B9AAD4 /* Assets.xcassets */; };
+		EED9658D2946291800B9AAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED9658B2946291800B9AAD4 /* Main.storyboard */; };
+		EED965992946295E00B9AAD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED965982946295E00B9AAD4 /* AppDelegate.swift */; };
+		EED9659B2946295E00B9AAD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED9659A2946295E00B9AAD4 /* ViewController.swift */; };
+		EED9659D2946295F00B9AAD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED9659C2946295F00B9AAD4 /* Assets.xcassets */; };
+		EED965A02946295F00B9AAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED9659E2946295F00B9AAD4 /* Main.storyboard */; };
 		EEE639D6290C29E50068D07B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE639D5290C29E50068D07B /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +53,18 @@
 		EE9919B52902EC91009AD283 /* NextWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextWindowController.swift; sourceTree = "<group>"; };
 		EE9919B62902EC91009AD283 /* NextWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextWindowController.xib; sourceTree = "<group>"; };
 		EE9919B92902ED18009AD283 /* NextWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextWindow.swift; sourceTree = "<group>"; };
+		EED965832946291700B9AAD4 /* IPC_Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPC_Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED965852946291700B9AAD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EED965872946291700B9AAD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EED965892946291800B9AAD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EED9658C2946291800B9AAD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EED9658E2946291800B9AAD4 /* IPC_Client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IPC_Client.entitlements; sourceTree = "<group>"; };
+		EED965962946295E00B9AAD4 /* IPC_Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPC_Service.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED965982946295E00B9AAD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EED9659A2946295E00B9AAD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EED9659C2946295F00B9AAD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EED9659F2946295F00B9AAD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EED965A12946295F00B9AAD4 /* IPC_Service.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IPC_Service.entitlements; sourceTree = "<group>"; };
 		EEE639D5290C29E50068D07B /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +77,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EE99199E2902E8F9009AD283 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED965802946291700B9AAD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED965932946295E00B9AAD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -91,6 +125,8 @@
 			children = (
 				EE9919A32902E8F9009AD283 /* macOSExample */,
 				6475228A2939EFE100374614 /* SwiftUIExample */,
+				EED965842946291700B9AAD4 /* IPC_Client */,
+				EED965972946295E00B9AAD4 /* IPC_Service */,
 				EE9919A22902E8F9009AD283 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +136,8 @@
 			children = (
 				EE9919A12902E8F9009AD283 /* macOSExample.app */,
 				647522892939EFE100374614 /* SwiftUIExample.app */,
+				EED965832946291700B9AAD4 /* IPC_Client.app */,
+				EED965962946295E00B9AAD4 /* IPC_Service.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +159,30 @@
 				EE9919AD2902E8FB009AD283 /* macOSExample.entitlements */,
 			);
 			path = macOSExample;
+			sourceTree = "<group>";
+		};
+		EED965842946291700B9AAD4 /* IPC_Client */ = {
+			isa = PBXGroup;
+			children = (
+				EED965852946291700B9AAD4 /* AppDelegate.swift */,
+				EED965872946291700B9AAD4 /* ViewController.swift */,
+				EED965892946291800B9AAD4 /* Assets.xcassets */,
+				EED9658B2946291800B9AAD4 /* Main.storyboard */,
+				EED9658E2946291800B9AAD4 /* IPC_Client.entitlements */,
+			);
+			path = IPC_Client;
+			sourceTree = "<group>";
+		};
+		EED965972946295E00B9AAD4 /* IPC_Service */ = {
+			isa = PBXGroup;
+			children = (
+				EED965982946295E00B9AAD4 /* AppDelegate.swift */,
+				EED9659A2946295E00B9AAD4 /* ViewController.swift */,
+				EED9659C2946295F00B9AAD4 /* Assets.xcassets */,
+				EED9659E2946295F00B9AAD4 /* Main.storyboard */,
+				EED965A12946295F00B9AAD4 /* IPC_Service.entitlements */,
+			);
+			path = IPC_Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +222,40 @@
 			productReference = EE9919A12902E8F9009AD283 /* macOSExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EED965822946291700B9AAD4 /* IPC_Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED965912946291800B9AAD4 /* Build configuration list for PBXNativeTarget "IPC_Client" */;
+			buildPhases = (
+				EED9657F2946291700B9AAD4 /* Sources */,
+				EED965802946291700B9AAD4 /* Frameworks */,
+				EED965812946291700B9AAD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IPC_Client;
+			productName = IPC_Client;
+			productReference = EED965832946291700B9AAD4 /* IPC_Client.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EED965952946295E00B9AAD4 /* IPC_Service */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED965A22946295F00B9AAD4 /* Build configuration list for PBXNativeTarget "IPC_Service" */;
+			buildPhases = (
+				EED965922946295E00B9AAD4 /* Sources */,
+				EED965932946295E00B9AAD4 /* Frameworks */,
+				EED965942946295E00B9AAD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IPC_Service;
+			productName = IPC_Service;
+			productReference = EED965962946295E00B9AAD4 /* IPC_Service.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,6 +271,12 @@
 					};
 					EE9919A02902E8F9009AD283 = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					EED965822946291700B9AAD4 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					EED965952946295E00B9AAD4 = {
+						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
@@ -193,6 +295,8 @@
 			targets = (
 				EE9919A02902E8F9009AD283 /* macOSExample */,
 				647522882939EFE100374614 /* SwiftUIExample */,
+				EED965822946291700B9AAD4 /* IPC_Client */,
+				EED965952946295E00B9AAD4 /* IPC_Service */,
 			);
 		};
 /* End PBXProject section */
@@ -215,6 +319,24 @@
 				EE9919AC2902E8FB009AD283 /* Main.storyboard in Resources */,
 				EE9919B82902EC91009AD283 /* NextWindowController.xib in Resources */,
 				EEE639D6290C29E50068D07B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED965812946291700B9AAD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED9658A2946291800B9AAD4 /* Assets.xcassets in Resources */,
+				EED9658D2946291800B9AAD4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED965942946295E00B9AAD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED9659D2946295F00B9AAD4 /* Assets.xcassets in Resources */,
+				EED965A02946295F00B9AAD4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +368,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EED9657F2946291700B9AAD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED965882946291700B9AAD4 /* ViewController.swift in Sources */,
+				EED965862946291700B9AAD4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED965922946295E00B9AAD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED9659B2946295E00B9AAD4 /* ViewController.swift in Sources */,
+				EED965992946295E00B9AAD4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -253,6 +393,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				EE9919AB2902E8FB009AD283 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EED9658B2946291800B9AAD4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EED9658C2946291800B9AAD4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EED9659E2946295F00B9AAD4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EED9659F2946295F00B9AAD4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -481,6 +637,110 @@
 			};
 			name = Release;
 		};
+		EED9658F2946291800B9AAD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IPC_Client/IPC_Client.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nenhall.ipc.lient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EED965902946291800B9AAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IPC_Client/IPC_Client.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nenhall.ipc.lient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EED965A32946295F00B9AAD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IPC_Service/IPC_Service.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nenhall.ipc.service;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EED965A42946295F00B9AAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IPC_Service/IPC_Service.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nenhall.ipc.service;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -507,6 +767,24 @@
 			buildConfigurations = (
 				EE9919B12902E8FB009AD283 /* Debug */,
 				EE9919B22902E8FB009AD283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED965912946291800B9AAD4 /* Build configuration list for PBXNativeTarget "IPC_Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED9658F2946291800B9AAD4 /* Debug */,
+				EED965902946291800B9AAD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED965A22946295F00B9AAD4 /* Build configuration list for PBXNativeTarget "IPC_Service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED965A32946295F00B9AAD4 /* Debug */,
+				EED965A42946295F00B9AAD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
