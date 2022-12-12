@@ -685,7 +685,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="服务端" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                    <window key="window" title="服务端" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -736,34 +736,71 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dHe-aU-eMl">
-                                <rect key="frame" x="312" y="189" width="96" height="30"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIT-0p-d6K">
+                                <rect key="frame" x="310.5" y="39" width="99" height="180"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dHe-aU-eMl">
+                                        <rect key="frame" x="2" y="150" width="96" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="nfJ-kM-MGR"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" title="发送 port 消息" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" continuous="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nwd-cY-0uE">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="sendPortMessage:" target="XfG-lQ-9wD" id="V4C-L0-nDh"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e8P-rh-WIH">
+                                        <rect key="frame" x="0.0" y="99" width="99" height="32"/>
+                                        <buttonCell key="cell" type="smallSquare" title="发布分布式通知" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DlL-g8-bIX">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="sendDistributedNotification:" target="XfG-lQ-9wD" id="Xha-gw-LII"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ova-g2-93H">
+                                        <rect key="frame" x="10" y="49" width="80" height="32"/>
+                                        <buttonCell key="cell" type="smallSquare" title="invokeClient" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KUd-HF-Dyk">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="invokeClient:" target="XfG-lQ-9wD" id="CDo-kx-2BX"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NwJ-WI-Nge">
+                                        <rect key="frame" x="7" y="-1" width="85" height="32"/>
+                                        <buttonCell key="cell" type="smallSquare" title="releaseClient" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nmm-67-ybM">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="releaseServerProxy:" target="XfG-lQ-9wD" id="jFk-zZ-PFA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Hu8-iR-nr6"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="XLz-qI-cf0"/>
+                                    <constraint firstItem="Ova-g2-93H" firstAttribute="height" secondItem="dHe-aU-eMl" secondAttribute="height" id="3h5-Kk-6J6"/>
+                                    <constraint firstItem="NwJ-WI-Nge" firstAttribute="height" secondItem="dHe-aU-eMl" secondAttribute="height" id="FRc-aQ-cGC"/>
+                                    <constraint firstItem="e8P-rh-WIH" firstAttribute="height" secondItem="dHe-aU-eMl" secondAttribute="height" id="PmJ-D4-F82"/>
                                 </constraints>
-                                <buttonCell key="cell" type="square" title="发送 port 消息" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" continuous="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nwd-cY-0uE">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="sendPortMessage:" target="XfG-lQ-9wD" id="V4C-L0-nDh"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e8P-rh-WIH">
-                                <rect key="frame" x="311" y="130" width="99" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Liq-06-egA"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="ecZ-9a-hg3"/>
-                                </constraints>
-                                <buttonCell key="cell" type="smallSquare" title="发布分布式通知" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DlL-g8-bIX">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="sendDistributedNotification:" target="XfG-lQ-9wD" id="Xha-gw-LII"/>
-                                </connections>
-                            </button>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bcL-oY-oK5">
                                 <rect key="frame" x="250" y="229" width="220" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="89A-CI-Nt7">
@@ -774,15 +811,11 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="e8P-rh-WIH" firstAttribute="centerX" secondItem="dHe-aU-eMl" secondAttribute="centerX" id="2ZW-YS-uur"/>
                             <constraint firstItem="bcL-oY-oK5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="4UM-p3-v6C"/>
-                            <constraint firstItem="e8P-rh-WIH" firstAttribute="top" secondItem="dHe-aU-eMl" secondAttribute="bottom" constant="28" id="9OB-4F-kgS"/>
-                            <constraint firstItem="dHe-aU-eMl" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" multiplier="1.5" id="Bh2-Zy-Smb"/>
                             <constraint firstItem="v8R-i1-jRP" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Rd4-v5-rbP"/>
                             <constraint firstItem="v8R-i1-jRP" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="VnS-C8-8Ty"/>
                             <constraint firstItem="bcL-oY-oK5" firstAttribute="leading" secondItem="v8R-i1-jRP" secondAttribute="trailing" constant="10" id="bV4-IE-Ncx"/>
                             <constraint firstAttribute="bottom" secondItem="v8R-i1-jRP" secondAttribute="bottom" id="bbd-Un-Izh"/>
-                            <constraint firstItem="dHe-aU-eMl" firstAttribute="top" secondItem="bcL-oY-oK5" secondAttribute="bottom" constant="10" id="d1U-Iu-yF3"/>
                             <constraint firstItem="v8R-i1-jRP" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" multiplier="0.5" id="kOw-m7-R1d"/>
                             <constraint firstAttribute="trailing" secondItem="bcL-oY-oK5" secondAttribute="trailing" constant="10" id="y08-y2-L37"/>
                         </constraints>

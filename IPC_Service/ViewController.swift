@@ -60,5 +60,13 @@ extension ViewController {
         }
         textView.string.append("\n")
     }
+    
+    @IBAction func invokeClient(_ sender:Any?) {
+        (NSApp.delegate as? AppDelegate)?.invokeClient(sender)
+    }
+    
+    @IBAction func releaseServerProxy(_ sender: NSButton) {
+        (NSApp.delegate as? AppDelegate)?.releaseServerProxy(sender)
+    }
 }
 

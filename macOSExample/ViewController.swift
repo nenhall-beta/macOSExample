@@ -8,11 +8,12 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    
     var sessionCode: NSApplication.ModalSession?
-
     let queue = DispatchQueue(label: "xxxx", qos: .background)
     let queue2 = DispatchQueue(label: "xxxx2")
     let semaphore = DispatchSemaphore(value: 1)
+    @IBOutlet var textView: NSTextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,14 @@ class ViewController: NSViewController {
             }
         }
     }
-
+    
+    @IBAction func sendXPCMessage(_ sender: Any) {
+        Helper.shared.sendMessag(textView.string) { result in
+            self.textView.string.append("\n")
+            self.textView.string.append(result)
+        }
+    }
+    
     @IBAction func showWindow(_ sender: Any?) {
         let nextWindow = NextWindow(
             contentRect: NSRect(x: 0, y: 0, width: 540, height: 360),

@@ -15,6 +15,20 @@
 		647522992939F05100374614 /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647522982939F05100374614 /* ViewRepresentable.swift */; };
 		6475229A2939F05100374614 /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647522982939F05100374614 /* ViewRepresentable.swift */; };
 		6475229B2939F0C400374614 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6475228D2939EFE100374614 /* ContentView.swift */; };
+		EE7063D0294705CB008AFD1D /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7063CF294705CB008AFD1D /* HelperProtocol.swift */; };
+		EE7063D2294705CB008AFD1D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7063D1294705CB008AFD1D /* Helper.swift */; };
+		EE7063D4294705CB008AFD1D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7063D3294705CB008AFD1D /* main.swift */; };
+		EE7063D8294705CB008AFD1D /* Helper.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = EE7063CD294705CB008AFD1D /* Helper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EE7063DE29470664008AFD1D /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7063CF294705CB008AFD1D /* HelperProtocol.swift */; };
+		EE7063E0294706BB008AFD1D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7063DF294706BB008AFD1D /* Helper.swift */; };
+		EE7063E329471695008AFD1D /* IPC_Client.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = EED965832946291700B9AAD4 /* IPC_Client.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EE7063E5294716AD008AFD1D /* IPCCommunicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7063E4294716AD008AFD1D /* IPCCommunicator.framework */; };
+		EE7063E7294716C4008AFD1D /* IPCCommunicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7063E6294716C4008AFD1D /* IPCCommunicator.framework */; };
+		EE7063E9294716D9008AFD1D /* IPCCommunicator.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EE7063E4294716AD008AFD1D /* IPCCommunicator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE7063EB294716F2008AFD1D /* IPCCommunicator.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EE7063E6294716C4008AFD1D /* IPCCommunicator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE7063EF29471852008AFD1D /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7063EE29471852008AFD1D /* test.m */; };
+		EE7063F2294718F4008AFD1D /* IPCServerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7063F1294718F4008AFD1D /* IPCServerProxy.m */; };
+		EE7063F9294719B3008AFD1D /* IPCClientProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7063F8294719B3008AFD1D /* IPCClientProxy.m */; };
 		EE9919A52902E8F9009AD283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9919A42902E8F9009AD283 /* AppDelegate.swift */; };
 		EE9919A72902E8F9009AD283 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9919A62902E8F9009AD283 /* ViewController.swift */; };
 		EE9919A92902E8FB009AD283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9919A82902E8FB009AD283 /* Assets.xcassets */; };
@@ -34,6 +48,69 @@
 		EEE639D6290C29E50068D07B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE639D5290C29E50068D07B /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EE7063D6294705CB008AFD1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE9919992902E8F9009AD283 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE7063CC294705CB008AFD1D;
+			remoteInfo = Helper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE7063D9294705CB008AFD1D /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				EE7063D8294705CB008AFD1D /* Helper.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE7063E12947164B008AFD1D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE7063E229471685008AFD1D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				EE7063E329471695008AFD1D /* IPC_Client.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE7063E8294716D0008AFD1D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EE7063E9294716D9008AFD1D /* IPCCommunicator.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE7063EA294716DE008AFD1D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EE7063EB294716F2008AFD1D /* IPCCommunicator.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		640FB1E729121FA600A9ADD1 /* NSPopoverMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPopoverMenu.swift; sourceTree = "<group>"; };
 		647522892939EFE100374614 /* SwiftUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +120,22 @@
 		647522922939EFE300374614 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		647522942939EFE300374614 /* SwiftUIExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIExample.entitlements; sourceTree = "<group>"; };
 		647522982939F05100374614 /* ViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
+		EE7063CD294705CB008AFD1D /* Helper.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = Helper.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE7063CF294705CB008AFD1D /* HelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperProtocol.swift; sourceTree = "<group>"; };
+		EE7063D1294705CB008AFD1D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		EE7063D3294705CB008AFD1D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		EE7063D5294705CB008AFD1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE7063DF294706BB008AFD1D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		EE7063E4294716AD008AFD1D /* IPCCommunicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IPCCommunicator.framework; sourceTree = "<group>"; };
+		EE7063E6294716C4008AFD1D /* IPCCommunicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IPCCommunicator.framework; sourceTree = "<group>"; };
+		EE7063EC29471852008AFD1D /* IPC_Service-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IPC_Service-Bridging-Header.h"; sourceTree = "<group>"; };
+		EE7063ED29471852008AFD1D /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		EE7063EE29471852008AFD1D /* test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
+		EE7063F0294718F4008AFD1D /* IPCServerProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPCServerProxy.h; sourceTree = "<group>"; };
+		EE7063F1294718F4008AFD1D /* IPCServerProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPCServerProxy.m; sourceTree = "<group>"; };
+		EE7063F6294719B3008AFD1D /* IPC_Client-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IPC_Client-Bridging-Header.h"; sourceTree = "<group>"; };
+		EE7063F7294719B3008AFD1D /* IPCClientProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPCClientProxy.h; sourceTree = "<group>"; };
+		EE7063F8294719B3008AFD1D /* IPCClientProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPCClientProxy.m; sourceTree = "<group>"; };
 		EE9919A12902E8F9009AD283 /* macOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9919A42902E8F9009AD283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE9919A62902E8F9009AD283 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +169,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EE7063CA294705CB008AFD1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE99199E2902E8F9009AD283 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7063E7294716C4008AFD1D /* IPCCommunicator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7063E5294716AD008AFD1D /* IPCCommunicator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,13 +222,33 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EE7063CE294705CB008AFD1D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EE7063D1294705CB008AFD1D /* Helper.swift */,
+				EE7063D3294705CB008AFD1D /* main.swift */,
+				EE7063D5294705CB008AFD1D /* Info.plist */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		EE7063DD29470646008AFD1D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				EE7063CF294705CB008AFD1D /* HelperProtocol.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		EE9919982902E8F9009AD283 = {
 			isa = PBXGroup;
 			children = (
+				EE7063DD29470646008AFD1D /* Shared */,
 				EE9919A32902E8F9009AD283 /* macOSExample */,
 				6475228A2939EFE100374614 /* SwiftUIExample */,
 				EED965842946291700B9AAD4 /* IPC_Client */,
 				EED965972946295E00B9AAD4 /* IPC_Service */,
+				EE7063CE294705CB008AFD1D /* Helper */,
 				EE9919A22902E8F9009AD283 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,6 +260,7 @@
 				647522892939EFE100374614 /* SwiftUIExample.app */,
 				EED965832946291700B9AAD4 /* IPC_Client.app */,
 				EED965962946295E00B9AAD4 /* IPC_Service.app */,
+				EE7063CD294705CB008AFD1D /* Helper.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +270,7 @@
 			children = (
 				EE9919A42902E8F9009AD283 /* AppDelegate.swift */,
 				EE9919A62902E8F9009AD283 /* ViewController.swift */,
+				EE7063DF294706BB008AFD1D /* Helper.swift */,
 				640FB1E729121FA600A9ADD1 /* NSPopoverMenu.swift */,
 				EE9919B32902EBE8009AD283 /* BasicView.swift */,
 				EE9919B92902ED18009AD283 /* NextWindow.swift */,
@@ -164,11 +288,15 @@
 		EED965842946291700B9AAD4 /* IPC_Client */ = {
 			isa = PBXGroup;
 			children = (
+				EE7063E6294716C4008AFD1D /* IPCCommunicator.framework */,
 				EED965852946291700B9AAD4 /* AppDelegate.swift */,
 				EED965872946291700B9AAD4 /* ViewController.swift */,
+				EE7063F7294719B3008AFD1D /* IPCClientProxy.h */,
+				EE7063F8294719B3008AFD1D /* IPCClientProxy.m */,
 				EED965892946291800B9AAD4 /* Assets.xcassets */,
 				EED9658B2946291800B9AAD4 /* Main.storyboard */,
 				EED9658E2946291800B9AAD4 /* IPC_Client.entitlements */,
+				EE7063F6294719B3008AFD1D /* IPC_Client-Bridging-Header.h */,
 			);
 			path = IPC_Client;
 			sourceTree = "<group>";
@@ -176,11 +304,17 @@
 		EED965972946295E00B9AAD4 /* IPC_Service */ = {
 			isa = PBXGroup;
 			children = (
+				EE7063E4294716AD008AFD1D /* IPCCommunicator.framework */,
 				EED965982946295E00B9AAD4 /* AppDelegate.swift */,
+				EE7063F0294718F4008AFD1D /* IPCServerProxy.h */,
+				EE7063F1294718F4008AFD1D /* IPCServerProxy.m */,
+				EE7063ED29471852008AFD1D /* test.h */,
+				EE7063EE29471852008AFD1D /* test.m */,
 				EED9659A2946295E00B9AAD4 /* ViewController.swift */,
 				EED9659C2946295F00B9AAD4 /* Assets.xcassets */,
 				EED9659E2946295F00B9AAD4 /* Main.storyboard */,
 				EED965A12946295F00B9AAD4 /* IPC_Service.entitlements */,
+				EE7063EC29471852008AFD1D /* IPC_Service-Bridging-Header.h */,
 			);
 			path = IPC_Service;
 			sourceTree = "<group>";
@@ -205,6 +339,23 @@
 			productReference = 647522892939EFE100374614 /* SwiftUIExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EE7063CC294705CB008AFD1D /* Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE7063DC294705CB008AFD1D /* Build configuration list for PBXNativeTarget "Helper" */;
+			buildPhases = (
+				EE7063C9294705CB008AFD1D /* Sources */,
+				EE7063CA294705CB008AFD1D /* Frameworks */,
+				EE7063CB294705CB008AFD1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Helper;
+			productName = Helper;
+			productReference = EE7063CD294705CB008AFD1D /* Helper.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
 		EE9919A02902E8F9009AD283 /* macOSExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE9919B02902E8FB009AD283 /* Build configuration list for PBXNativeTarget "macOSExample" */;
@@ -212,10 +363,13 @@
 				EE99199D2902E8F9009AD283 /* Sources */,
 				EE99199E2902E8F9009AD283 /* Frameworks */,
 				EE99199F2902E8F9009AD283 /* Resources */,
+				EE7063D9294705CB008AFD1D /* Embed XPC Services */,
+				EE7063E12947164B008AFD1D /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EE7063D7294705CB008AFD1D /* PBXTargetDependency */,
 			);
 			name = macOSExample;
 			productName = macOSExample;
@@ -229,6 +383,7 @@
 				EED9657F2946291700B9AAD4 /* Sources */,
 				EED965802946291700B9AAD4 /* Frameworks */,
 				EED965812946291700B9AAD4 /* Resources */,
+				EE7063EA294716DE008AFD1D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -246,6 +401,8 @@
 				EED965922946295E00B9AAD4 /* Sources */,
 				EED965932946295E00B9AAD4 /* Frameworks */,
 				EED965942946295E00B9AAD4 /* Resources */,
+				EE7063E229471685008AFD1D /* CopyFiles */,
+				EE7063E8294716D0008AFD1D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -269,14 +426,19 @@
 					647522882939EFE100374614 = {
 						CreatedOnToolsVersion = 14.1;
 					};
+					EE7063CC294705CB008AFD1D = {
+						CreatedOnToolsVersion = 14.1;
+					};
 					EE9919A02902E8F9009AD283 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 					EED965822946291700B9AAD4 = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 					};
 					EED965952946295E00B9AAD4 = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -297,6 +459,7 @@
 				647522882939EFE100374614 /* SwiftUIExample */,
 				EED965822946291700B9AAD4 /* IPC_Client */,
 				EED965952946295E00B9AAD4 /* IPC_Service */,
+				EE7063CC294705CB008AFD1D /* Helper */,
 			);
 		};
 /* End PBXProject section */
@@ -308,6 +471,13 @@
 			files = (
 				647522932939EFE300374614 /* Preview Assets.xcassets in Resources */,
 				647522902939EFE300374614 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE7063CB294705CB008AFD1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +523,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EE7063C9294705CB008AFD1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE7063D0294705CB008AFD1D /* HelperProtocol.swift in Sources */,
+				EE7063D2294705CB008AFD1D /* Helper.swift in Sources */,
+				EE7063D4294705CB008AFD1D /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE99199D2902E8F9009AD283 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,6 +542,8 @@
 				6475229B2939F0C400374614 /* ContentView.swift in Sources */,
 				EE9919A72902E8F9009AD283 /* ViewController.swift in Sources */,
 				647522992939F05100374614 /* ViewRepresentable.swift in Sources */,
+				EE7063E0294706BB008AFD1D /* Helper.swift in Sources */,
+				EE7063DE29470664008AFD1D /* HelperProtocol.swift in Sources */,
 				EE9919A52902E8F9009AD283 /* AppDelegate.swift in Sources */,
 				EE9919BA2902ED18009AD283 /* NextWindow.swift in Sources */,
 				640FB1E829121FA600A9ADD1 /* NSPopoverMenu.swift in Sources */,
@@ -372,6 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7063F9294719B3008AFD1D /* IPCClientProxy.m in Sources */,
 				EED965882946291700B9AAD4 /* ViewController.swift in Sources */,
 				EED965862946291700B9AAD4 /* AppDelegate.swift in Sources */,
 			);
@@ -382,11 +565,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				EED9659B2946295E00B9AAD4 /* ViewController.swift in Sources */,
+				EE7063F2294718F4008AFD1D /* IPCServerProxy.m in Sources */,
 				EED965992946295E00B9AAD4 /* AppDelegate.swift in Sources */,
+				EE7063EF29471852008AFD1D /* test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE7063D7294705CB008AFD1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE7063CC294705CB008AFD1D /* Helper */;
+			targetProxy = EE7063D6294705CB008AFD1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EE9919AA2902E8FB009AD283 /* Main.storyboard */ = {
@@ -463,6 +656,46 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixocial.SwiftUIExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EE7063DA294705CB008AFD1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Helper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Helper;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipc.lient.helper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EE7063DB294705CB008AFD1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Helper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Helper;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipc.lient.helper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -584,6 +817,7 @@
 		EE9919B12902E8FB009AD283 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOSExample/macOSExample.entitlements;
@@ -612,6 +846,7 @@
 		EE9919B22902E8FB009AD283 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOSExample/macOSExample.entitlements;
@@ -642,10 +877,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = IPC_Client/IPC_Client.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IPC_Client",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -659,6 +899,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nenhall.ipc.lient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "IPC_Client/IPC_Client-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -668,10 +910,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = IPC_Client/IPC_Client.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IPC_Client",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -685,6 +932,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nenhall.ipc.lient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "IPC_Client/IPC_Client-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -694,10 +942,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = IPC_Service/IPC_Service.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IPC_Service",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -711,6 +964,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nenhall.ipc.service;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "IPC_Service/IPC_Service-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -720,10 +975,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = IPC_Service/IPC_Service.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IPC_Service",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -737,6 +997,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nenhall.ipc.service;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "IPC_Service/IPC_Service-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -749,6 +1010,15 @@
 			buildConfigurations = (
 				647522952939EFE300374614 /* Debug */,
 				647522962939EFE300374614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE7063DC294705CB008AFD1D /* Build configuration list for PBXNativeTarget "Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE7063DA294705CB008AFD1D /* Debug */,
+				EE7063DB294705CB008AFD1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

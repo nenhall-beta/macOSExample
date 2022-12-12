@@ -685,7 +685,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="客户端" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                    <window key="window" title="客户端" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -736,43 +736,65 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2XB-sM-s5K">
-                                <rect key="frame" x="290" y="240" width="96" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3LO-cY-UFe"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="RaH-bi-ZIx"/>
-                                </constraints>
-                                <buttonCell key="cell" type="smallSquare" title="创建Mack Port" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="buT-kB-tzE">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="createMessagePort:" target="XfG-lQ-9wD" id="d0P-35-SnJ"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="21P-cV-oNM">
-                                <rect key="frame" x="288" y="182" width="99" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="0Dc-EB-JAv"/>
-                                    <constraint firstAttribute="height" constant="30" id="JlO-aA-cjB"/>
-                                </constraints>
-                                <buttonCell key="cell" type="smallSquare" title="监听分布式通知" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="90C-zh-2nE">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="addDistributedNotification:" target="XfG-lQ-9wD" id="4yL-Ir-8y4"/>
-                                </connections>
-                            </button>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="23" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJs-uy-avE">
+                                <rect key="frame" x="290" y="135" width="99" height="136"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2XB-sM-s5K">
+                                        <rect key="frame" x="2" y="105" width="96" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="w3X-aX-zwW"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="smallSquare" title="创建Mack Port" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="buT-kB-tzE">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="createMessagePort:" target="XfG-lQ-9wD" id="d0P-35-SnJ"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="21P-cV-oNM">
+                                        <rect key="frame" x="0.0" y="52" width="99" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="cr8-pk-R0m"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="smallSquare" title="监听分布式通知" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="90C-zh-2nE">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="addDistributedNotification:" target="XfG-lQ-9wD" id="4yL-Ir-8y4"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VSb-nR-STj">
+                                        <rect key="frame" x="6" y="-1" width="87" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="A1D-cO-OEC"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="smallSquare" title="doSomething" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CDi-fP-BkN">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="notifyServer:" target="XfG-lQ-9wD" id="lSY-4a-HcH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="VmY-D4-vok" firstAttribute="leading" secondItem="01F-Ye-eA8" secondAttribute="leading" id="6XL-N6-wSY"/>
                             <constraint firstItem="VmY-D4-vok" firstAttribute="width" secondItem="01F-Ye-eA8" secondAttribute="width" multiplier="0.5" id="B7b-iE-h5j"/>
                             <constraint firstAttribute="bottom" secondItem="VmY-D4-vok" secondAttribute="bottom" id="BIk-12-1DF"/>
-                            <constraint firstItem="21P-cV-oNM" firstAttribute="top" secondItem="2XB-sM-s5K" secondAttribute="bottom" constant="28" id="CEO-uz-RTx"/>
-                            <constraint firstItem="2XB-sM-s5K" firstAttribute="top" secondItem="01F-Ye-eA8" secondAttribute="top" constant="29" id="HTd-ZZ-c7g"/>
-                            <constraint firstItem="21P-cV-oNM" firstAttribute="centerX" secondItem="2XB-sM-s5K" secondAttribute="centerX" id="VD0-Ix-9Au"/>
-                            <constraint firstItem="2XB-sM-s5K" firstAttribute="centerX" secondItem="01F-Ye-eA8" secondAttribute="centerX" multiplier="1.5" id="bWN-ZX-Jr3"/>
                             <constraint firstItem="VmY-D4-vok" firstAttribute="top" secondItem="01F-Ye-eA8" secondAttribute="top" id="kim-nU-jDB"/>
                         </constraints>
                     </view>

@@ -19,6 +19,10 @@ class ViewController: NSViewController {
 //        createMessagePort(nil)
 //        addDistributedNotification(nil)
     }
+    
+    @IBAction func notifyServer(_ sender:Any?) {
+        (NSApp.delegate as? AppDelegate)?.notifyServer(sender)
+    }
 }
 
 extension ViewController {

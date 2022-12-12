@@ -24,8 +24,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     lazy var windowController = NSWindowController(window: window)
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        windowController.showWindow(self)
-        window.center()
+//        windowController.showWindow(self)
+//        window.center()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="Search Toolbar Item" minToolsVersion="12.0" minSystemVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -784,9 +784,8 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpC-52-kyV">
-                                <rect key="frame" x="61" y="106" width="240" height="135"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpC-52-kyV">
+                                <rect key="frame" x="20" y="115" width="240" height="135"/>
                                 <clipView key="contentView" drawsBackground="NO" id="ZHO-zG-mgg">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -802,6 +801,10 @@
                                         </textView>
                                     </subviews>
                                 </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Y5f-vd-Eb8"/>
+                                    <constraint firstAttribute="height" constant="135" id="h27-c0-atN"/>
+                                </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="d5K-Ue-q2Q">
                                     <rect key="frame" x="-100" y="-100" width="240" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -811,13 +814,30 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DNY-by-nnE">
+                                <rect key="frame" x="273" y="108" width="114" height="32"/>
+                                <buttonCell key="cell" type="push" title="给XPC发消息" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gsn-zb-39I">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="sendXPCMessage:" target="XfG-lQ-9wD" id="gOL-nR-CWy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UAf-hd-uYq" secondAttribute="trailing" constant="20" id="4Jd-hE-f2O"/>
                             <constraint firstItem="UAf-hd-uYq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="7Vr-yQ-NVR"/>
+                            <constraint firstItem="DNY-by-nnE" firstAttribute="bottom" secondItem="bx6-Ek-4Ra" secondAttribute="bottom" id="86W-Sx-1dC"/>
+                            <constraint firstItem="TpC-52-kyV" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="UAP-cB-xVe"/>
                             <constraint firstAttribute="bottom" secondItem="UAf-hd-uYq" secondAttribute="bottom" constant="10" id="V1P-MN-LTZ"/>
+                            <constraint firstItem="DNY-by-nnE" firstAttribute="leading" secondItem="TpC-52-kyV" secondAttribute="trailing" constant="20" id="cHH-z7-2Sw"/>
+                            <constraint firstItem="TpC-52-kyV" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="vYP-K9-igv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="bx6-Ek-4Ra" id="1Wh-nb-fHl"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

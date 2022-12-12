@@ -1,0 +1,6 @@
+framework module IPCCommunicator {
+  umbrella header "IPCCommunicator.h"
+
+  export *
+  module * { export * }
+}
